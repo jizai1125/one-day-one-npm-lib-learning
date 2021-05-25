@@ -38,7 +38,7 @@ function MayError() {
 
   const handleClick = () => {
     let value = count
-    if(value >=3) {
+    if (value >= 3) {
       // throw new Error('f*************k!!!')
       setError(new Error('f*************k!!!'))
     }
@@ -46,18 +46,12 @@ function MayError() {
     setCount(++value)
   }
 
-  let element
-  if (count >= 3) {
-    // throw new Error('f*************k!!!')
-    // setError(new Error('f*************k!!!'))
-  } else {
-    element = (
-      <div>
-        <button onClick={handleClick}>throw error</button>
-        <p>{count}</p>
-      </div>
-    )
-  }
+  let element = (
+    <div>
+      <button onClick={handleClick}>throw error</button>
+      <p>{count}</p>
+    </div>
+  )
   return element
 }
 
