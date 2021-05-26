@@ -12,11 +12,13 @@ class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
+    console.log(11111111111)
     // 更新 state 使下一次渲染能够显示降级后的 UI
     return { hasError: true }
   }
 
   componentDidCatch(error, errorInfo) {
+    console.log(222222222222)
     // 你同样可以将错误日志上报给服务器
     // logger.error(error, errorInfo);
     console.warn('<<< componentDidCatch log error>>>', error)
